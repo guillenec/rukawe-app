@@ -3,7 +3,7 @@ import React from 'react'
 const Materiales = () => {
   return (
     <div>
-      <h1>Materiales Lista</h1>
+      <h1>materialles</h1>
     </div>
   )
 }
