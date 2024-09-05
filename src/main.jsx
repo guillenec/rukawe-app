@@ -7,16 +7,18 @@ import {
 import App from './App.jsx'
 import ErrorPage from './error-page.jsx';
 import "./index.css";
+import Home from './pages/home/Home.jsx';
+import Login from './pages/login/Login.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello world!</div>,
+    element: <Home />,
     errorElement: <ErrorPage />,
   },
   {
     path: "/materiales",
-    element: <div>Lista de Productos</div>,
+    element: <Materiales />,
   },
   {
     path: "/usuario",
@@ -24,7 +26,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/login",
-    element: <div>Inicio de secion / registro</div>,
+    element: <Login />,
   },
 ]);
 
