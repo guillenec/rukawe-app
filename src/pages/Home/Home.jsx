@@ -1,8 +1,14 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { BeakerIcon } from '@heroicons/react/24/solid'
 
 const Home = () => {
+  const [activeIndex, setActiveIndex] = useState()
+
+  useEffect(() => {
+    console.log(activeIndex)
+  }, [activeIndex])
+
 
   const personalLnk = "h-10 w-24 flex justify-center items-center p-4 hover:bg-color_custom2 hover:text-color_custom4 transition-colors ease-linear duration-300 z-10"
   return (
@@ -10,11 +16,11 @@ const Home = () => {
       <header className='fixed w-full h-[80px] lg:w-52 lg:h-full bg-slate-800 text-white  text-base '>
         <nav className='naviMenu w-full h-full flex flex-row justify-start items-center flex-nowrap p-2 gap-3 bg-slate-400 text-xl font-titulo apitalize font-medium border-2'>
           <section className='bg-[#180C0C] flex flex-nowrap justify-start items-center gap-3'>
-            <div className={`activeButton absolute left-2.2 bg-color_custom3 h-10 w-24 z-0 rounded-md ${activeHover === 1 ? 'left-1' : activeHover === 2 ? 'left-32' : activeHover === 3 ? 'left-64' : 'left-96'}`}> </div>
-            <Link to={'/'} className={`${personalLnk}`} onClick={setActiveHover(1)}>Home</Link>
-            <Link to={'/login'} className={`${personalLnk}`} onClick={setActiveHover(2)}>Login</Link>
-            <Link to={'/materiales'} className={`${personalLnk}`} onClick={setActiveHover(3)}>Materiales</Link>
-            <Link to={'/carga'} className={`${personalLnk}`} onClick={setActiveHover(4)}>Subir</Link>
+            <div className={`activeButton absolute left-2.2 bg-color_custom3 h-10 w-24 z-0 rounded-md `}> </div>
+            <Link to={'/'} className={`${personalLnk}`} onClick={setActiveIndex(1)}>Home</Link>
+            <Link to={'/login'} className={`${personalLnk}`} onClick={setActiveIndex(2)}>Login</Link>
+            <Link to={'/materiales'} className={`${personalLnk}`} onClick={setActiveIndex(3)}>Materiales</Link>
+            <Link to={'/carga'} className={`${personalLnk}`} onClick={setActiveIndex(4)}>Subir</Link>
           </section>
         </nav>
         <section></section>
