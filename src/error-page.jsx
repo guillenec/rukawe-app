@@ -6,7 +6,7 @@ export default function ErrorPage() {
   console.error(error);
 
   return (
-    <div className="w-full h-screen flex flex-col justify-center items-center lg:min-h-screen">
+    <div className="errorPage w-full h-screen flex flex-col justify-center items-center lg:min-h-screen">
       <ErrorSection />
     </div>
   );

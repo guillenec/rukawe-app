@@ -1,21 +1,16 @@
-import { useState } from "react"
 import './App.css'
+import Contain from "./layouts/contain/Contain"
+import RoutesApp from './routes/routes'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-     <header></header>
-     <main>
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-      </h1>
-     </main>
-      <footer></footer>
-    </>
+
+    <Contain>
+      <RoutesApp />
+    </Contain>
+
   )
 }
 
 export default App
-  
