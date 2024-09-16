@@ -1,12 +1,11 @@
+import ActiveToggle from "../../../../store/activeToggle/activeToggle"
 import NavLogo from "./components/navLogo/NavLogo"
 import NavMenu from "./components/navMenu/NavMenu"
 import NavUtils from "./components/navUtils/NavUtils"
 
 
 const NavBar = () => {
-  // const { isOpen } = useSelector(state => state?.nav)
-  // const { } = useSelector(state => state?.logged)
-  const isOpen = false
+  const { isOpen } = ActiveToggle()
 
   return (
     <div

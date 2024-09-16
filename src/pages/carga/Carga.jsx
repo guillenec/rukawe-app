@@ -1,18 +1,16 @@
 import React, { useEffect } from 'react'
 import ActiveIndex from '../../store/activeIndex/ActiveIndex'
 
-const Materiales = () => {
+const Carga = () => {
   const { setActiveIndex } = ActiveIndex()
 
   useEffect(() => {
-    setActiveIndex(1)
+    setActiveIndex(2)
   }, [])
 
   return (
-    <div>
-      <h1>materialles</h1>
-    </div>
+    <div>Carga</div>
   )
 }
 
-export default Materiales
+export default Carga

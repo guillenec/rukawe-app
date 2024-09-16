@@ -19,7 +19,7 @@ const NavLogo = () => {
       onClick={handleClick}
     >
       <span className='capitalize font-titulo'>
-        GreenEats
+        Rukawe
       </span>
     </button>
   )

@@ -1,7 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { BeakerIcon } from '@heroicons/react/24/solid'
+import ActiveIndex from '../../store/activeIndex/ActiveIndex'
 
 const Home = () => {
+  const { setActiveIndex } = ActiveIndex()
+
+  useEffect(() => {
+    setActiveIndex(0)
+    console.log("Home")
+  }, [])
 
   return (
     <>

@@ -1,12 +1,13 @@
-import React, { useState } from 'react'
+import ActiveToggle from '../../../../store/activeToggle/activeToggle'
 
 const Toggle = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const { isOpen, setIsOpen } = ActiveToggle()
 
+  // console.log("valor de ISOPEN ->", isOpen)
 
   const handleToggle = () => {
     setIsOpen(!isOpen)
-    console.log('toggle')
+    // console.log('toggle', !isOpen)
   }
 
   return (

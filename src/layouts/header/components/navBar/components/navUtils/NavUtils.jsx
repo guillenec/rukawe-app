@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 // import SearchButton from '../searchButton/SearchButton'
 import { useNavigate } from 'react-router-dom'
-import { IoAddSharp, IoCartSharp, IoLogInOutline, IoPersonCircleOutline } from 'react-icons/io5'
+import { IoAddSharp, IoLogInOutline, IoPersonCircleOutline } from 'react-icons/io5'
 import CardUserLogin from './components/CardUserLogin'
 
 
