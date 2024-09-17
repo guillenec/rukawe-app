@@ -27,8 +27,6 @@ const NavMenu = () => {
           carga
           <span className={`h-[5px] rounded-[30px] bg-color_custom3 absolute -bottom-1 transition-all duration-200 ease-in ${activeIndex === 2 ? 'w-[100%]' : 'w-0'}`} />
         </Link>
-
-
       </nav>
     </>
   )
