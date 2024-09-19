@@ -1,8 +1,7 @@
 /** @type {import('tailwindcss').Config} */
-const colors = require('tailwindcss/colors');
+import colors from 'tailwindcss/colors';
 
 export default {
-  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -14,31 +13,14 @@ export default {
     transparent: 'transparent',
     current: 'currentColor',
     extend: {
-      fontFamily: {
-        titulo: ['SUSE', 'sans-serif'],
-        parrafo: ['Lato', 'sans-serif'],
-      },
-      boxShadow: {
-        custom: '2px 3px 6px #969696, -3px -3px 4px #ffffff'
-      },
       colors: {
-        color_custom1: 'var(--custom1)',
-        color_custom2: 'var(--custom2)',
-        color_custom3: 'var(--custom3)',
-        color_custom4: 'var(--custom4)',
-        color_custom5: 'var(--custom5)',
-        color_titulo: 'var(--customTitulo)',
-        color_parrafo: 'var(--customParrafo)',
-
         // light mode
         tremor: {
           brand: {
-            // faint: colors.blue[50],
-            faint: '#F9BD9C', // <--- tremor-brand-faint, lighter shade of brand color
+            faint: colors.blue[50],
             muted: colors.blue[200],
             subtle: colors.blue[400],
-            // DEFAULT: colors.blue[500],
-            DEFAULT: '#F99157', // <--- tremor-brand-DEFAULT, brand color
+            DEFAULT: colors.blue[500],
             emphasis: colors.blue[700],
             inverted: colors.white,
           },
@@ -151,5 +133,3 @@ export default {
   ],
   plugins: [require('@headlessui/tailwindcss'), require('@tailwindcss/forms')],
 }
-
-
