@@ -69,6 +69,7 @@ const Carga = () => {
 
   return (
     <div className='w-full h-screen m-auto'>
+      <h1>carga de datos</h1>
       <Card>
         <h3 className="text-tremor-content-strong dark:text-dark-tremor-content-strong font-semibold">List of Swiss Federal Councillours</h3>
         <Table className="mt-5">
