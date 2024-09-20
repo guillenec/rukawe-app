@@ -21,7 +21,7 @@ const Contain = ({ children }) => {
         <section></section>
       </header> */}
       <Header />
-      <main className='bg-yellow-200 w-full h-full min-h-screen flex justify-center items-center text-slate-900'>
+      <main className='bg-yellow-200 w-full h-full min-h-screen flex justify-center items-center text-slate-900 mt-16 lg:mt-20'>
         {children}
       </main>
       <footer className='w-full h-24 bg-slate-500'></footer>
