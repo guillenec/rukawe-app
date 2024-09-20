@@ -25,7 +25,7 @@ const Home = () => {
     fetchMateriales();
   }, []);
 
-  console.log(materiales)
+  console.log("estos son los materiales -> ", materiales)
 
   return (
     <div className='w-full min-h-56 py-14 bg-pink-200 flex flex-col justify-start items-center gap-5'>
