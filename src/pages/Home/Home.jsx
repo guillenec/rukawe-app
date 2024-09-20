@@ -15,7 +15,6 @@ const Home = () => {
     <div className='w-full h-56 bg-pink-200 flex flex-col justify-start items-center gap-5'>
       <h1 className="text-red text-2xl font-titulo flex gap-1 justify-center items-center">
         <BeakerIcon className="size-6 text-blue-500" />home</h1>
-
       <Card className="mx-auto max-w-md">
         <h4 className="text-tremor-default text-tremor-content dark:text-dark-tremor-content">
           Sales
@@ -29,8 +28,6 @@ const Home = () => {
         </p>
         <ProgressBar value={32} className="mt-2" />
       </Card>
-
-
     </div>
 
   )
