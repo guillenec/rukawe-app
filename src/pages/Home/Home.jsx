@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ActiveIndex from '../../store/activeIndex/ActiveIndex'
 import { collection, getDocs } from 'firebase/firestore'
-import { db } from '../../firebase'; // ajusta la ruta según tu archivo firebase.js
+import { db } from '../../firebase/config'; // ajusta la ruta según tu archivo firebase.js
 import CardCustom from '../../components/CardCustom/CardCustom';
 
 const Home = () => {
@@ -15,14 +15,22 @@ const Home = () => {
 
   // funcion paa obtener datos desde firestore
   const fetchMateriales = async () => {
-    const querySnapshot = await getDocs(collection(db, "materiales"));
-    const materialesList = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-    setMateriales(materialesList);
+    // creamos la referencia a la colleccion de materiales
+    // const querySnapshot = await getDocs(collection(db, "materiales"));
+    // const querySnapshot = await getDocs(collection(db, "materiales"));
+    // const materialesList = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+    // setMateriales(materialesList);
   }
 
   // Llamar a la función fetchMateriales cuando el componente se monta
   useEffect(() => {
-    fetchMateriales();
+    const productosRef = collection(db, "materiales");
+    getDocs(productosRef)
+      .then((res) => {
+        // const materialesList = res.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+        // setMateriales(materialesList);
+        console.log("response ==> ", res)
+      })
   }, []);
 
   console.log("estos son los materiales -> ", materiales)
