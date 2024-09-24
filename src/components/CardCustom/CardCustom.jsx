@@ -3,6 +3,9 @@ import React from 'react'
 
 
 const CardCustom = ({ material }) => {
+
+  const progressNum = material != null ? material?.disponible / material?.total * 100 : 0;
+
   return (
     <>
       <Card className="mx-auto w-64 lg:w-72 overflow-hidden relative flex flex-col justify-between">
@@ -14,7 +17,11 @@ const CardCustom = ({ material }) => {
           {material?.nombre ? material.nombre : 'nombre default'}
         </p>
         <section className="flex items-center justify-between text-tremor-default text-tremor-content dark:text-dark-tremor-content p-2">
-          <span>{material?.total ? material.total : 0}</span>
+          <div>
+            <span>
+              {material?.total ? material.total : 0}
+            </span>
+          </div>
           <span>{material?.disponible ? material.disponible : 0}</span>
         </section>
         <section className='w-full p-2 flex justify-between items-center gap-5'>
@@ -29,7 +36,7 @@ const CardCustom = ({ material }) => {
             </Button>
           </section>
         </section>
-        <ProgressBar value={100} className="mt-2" />
+        <ProgressBar value={progressNum} className="mt-2" />
       </Card>
     </>
   )

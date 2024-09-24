@@ -36,7 +36,7 @@ const Home = () => {
   console.log("estos son los materiales -> ", materiales)
 
   return (
-    <div className='w-full min-h-56 py-14 bg-pink-200 flex flex-col justify-start items-center gap-5'>
+    <div className='w-full min-h-56 py-14 flex flex-col justify-start items-center gap-5'>
       <h1 className="text-red text-2xl font-titulo flex gap-1 justify-center items-center">Lista de Materiales</h1>
       <section className='w-full h-auto grid gap-4 grid-cols-1 md:gap-2 md:grid-cols-2 lg:grid-cols-3'>
         {
