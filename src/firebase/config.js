@@ -5,15 +5,13 @@ import { getFirestore } from 'firebase/firestore';
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDOFPxplKe52KzRgF6rAiOdW9ibID0Xjow",
-  authDomain: "esrnstock.firebaseapp.com",
-  projectId: "esrnstock",
-  storageBucket: "esrnstock.appspot.com",
-  messagingSenderId: "99717032781",
-  appId: "1:99717032781:web:a81900271ddd4ba5362504",
-  measurementId: "G-3PF2K9ZB75"
+  apiKey: "AIzaSyBRK4VTWUPKyUs55wx-_7mLk9zL4bP3tPg",
+  authDomain: "materiales-rukawe.firebaseapp.com",
+  projectId: "materiales-rukawe",
+  storageBucket: "materiales-rukawe.appspot.com",
+  messagingSenderId: "86155096443",
+  appId: "1:86155096443:web:ec74fd9c9360a6a4748dde"
 };
 
 // Initialize Firebase

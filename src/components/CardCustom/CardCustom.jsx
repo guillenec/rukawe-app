@@ -1,29 +1,32 @@
-import { Card, ProgressBar } from '@tremor/react'
+import { Button, Card, ProgressBar } from '@tremor/react'
 import React from 'react'
 
-const CardCustom = () => {
+
+const CardCustom = ({ material }) => {
   return (
     <>
-      <Card className="mx-auto max-w-md">
-        <img src="https://res.cloudinary.com/dpiwmbsog/image/upload/v1726837099/esrn6/lpujbowpkid943l4w3qm.png" alt="tela1" className='w-full h-36 object-cover overflow-hidden rounded-sm' />
-        <h4 className="text-tremor-default text-tremor-content dark:text-dark-tremor-content">
-          Tela color vino
+      <Card className="mx-auto w-64 lg:w-72 overflow-hidden relative flex flex-col justify-between">
+        <img src={material?.imagen1 ? material.imagen1 : "https://res.cloudinary.com/dpiwmbsog/image/upload/v1726837099/esrn6/lpujbowpkid943l4w3qm.png"} alt="tela1" className='w-full md:w-full h-32 md:h-36 md:aspect-square object-cover overflow-hidden rounded-sm bg-right-top' />
+        <h4 className="text-tremor-default text-tremor-content dark:text-dark-tremor-content h-11 overflow-hidden whitespace-nowrap text-ellipsis">
+          {material?.descripcion ? material.descripcion : 'descripcion'}
         </h4>
-        <p className="text-tremor-metric font-semibold text-tremor-content-strong dark:text-dark-tremor-content-strong capitalize">
-          tela color vino gamusa
+        <p className=" font-semibold text-tremor-content-strong dark:text-dark-tremor-content-strong capitalize text-xl text-center text-color_custom2">
+          {material?.nombre ? material.nombre : 'nombre default'}
         </p>
-        <p className="mt-4 flex items-center justify-between text-tremor-default text-tremor-content dark:text-dark-tremor-content">
-          <span>total telas: 5</span>
-          <span>disponibles 5</span>
-        </p>
-        <section className='w-full p-2 flex justify-center items-center gap-5'>
-          <section>
-            <button className='text-color rounded-sm text-color_custom3 font-semibold text-2xl p-3  hover:bg-color_custom4 hover:text-color_custom1 transition-colors ease-linear duration-300'>-</button>
-            <span className='text-color_custom1 font-semibold text-2xl p-1'>1</span>
-            <button className='rounded-sm text-color_custom3 font-semibold text-2xl p-3  hover:bg-color_custom4 hover:text-color_custom1 transition-colors ease-linear duration-300'>+</button>
+        <section className="flex items-center justify-between text-tremor-default text-tremor-content dark:text-dark-tremor-content p-2">
+          <span>{material?.total ? material.total : 0}</span>
+          <span>{material?.disponible ? material.disponible : 0}</span>
+        </section>
+        <section className='w-full p-2 flex justify-between items-center gap-5'>
+          <section className='flex justify-center items-center gap-2'>
+            <Button variant='secondary' className='rounded-sm text-lg transition-colors ease-linear duration-300 m-0 px-3'>   -  </Button>
+            <span className='text-color_custom2 font-semibold text-lg '>1</span>
+            <Button variant='secondary' className='rounded-sm text-lg transition-colors ease-linear duration-300 m-0 px-3'>  + </Button>
           </section>
           <section>
-            <button className='grid place-content-center h-10 px-4 rounded-md bg-color_custom3 capitalize text-white font-semibold'>solicitar</button>
+            <Button variant='primary' className='transition-colors ease-linear duration-300 hover:bg-color_custom2'>
+              solicitar
+            </Button>
           </section>
         </section>
         <ProgressBar value={100} className="mt-2" />
