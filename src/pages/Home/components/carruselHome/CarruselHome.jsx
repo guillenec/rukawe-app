@@ -3,7 +3,9 @@ import React from 'react'
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import banner_final from '../../../../img/banner_final.png'
+import banner2 from '../../../../img/banner2.png'
+import dinosaurio from '../../../../img/dinosaurio.png'
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -16,17 +18,23 @@ const CarruselHome = () => {
       // install Swiper modules
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={50}
-      slidesPerView={3}
+      slidesPerView={1}
       navigation
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
+      className='h-full'
     >
-      <SwiperSlide>Slide 1</SwiperSlide>
-      <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide>
+      <SwiperSlide>
+        <img src={banner_final} alt="banner 1 aplicacion" className='w-full h-full overflow-hidden object-contain' />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src={banner2} alt="banner 2 aplicacion" className='w-full h-full overflow-hidden object-contain' />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src={dinosaurio} alt="banner 3 aplicacion" className='w-full h-full overflow-hidden object-contain' />
+      </SwiperSlide>
       ...
     </Swiper>
   );
