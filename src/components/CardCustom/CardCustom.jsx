@@ -18,11 +18,19 @@ const CardCustom = ({ material }) => {
         </p>
         <section className="flex items-center justify-between text-tremor-default text-tremor-content dark:text-dark-tremor-content p-2">
           <div>
-            <span>
-              {material?.total ? material.total : 0}
-            </span>
+            <p className='flex flex-col capitalize font-parrafo font-semibold text-sm justify-center items-center gap-1'>
+              total
+              <span className='font-bold text-color_custom3'>
+                {material?.total ? material.total : 0}
+              </span>
+            </p>
           </div>
-          <span>{material?.disponible ? material.disponible : 0}</span>
+          <div>
+            <p className='flex flex-col capitalize font-parrafo font-semibold text-base justify-center items-center'>
+              disponible
+              <span className='font-bold text-green-600'>{material?.disponible ? material.disponible : 0}</span>
+            </p>
+          </div>
         </section>
         <section className='w-full p-2 flex justify-between items-center gap-5'>
           <section className='flex justify-center items-center gap-2'>

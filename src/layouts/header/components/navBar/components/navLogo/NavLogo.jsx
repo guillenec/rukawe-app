@@ -15,10 +15,10 @@ const NavLogo = () => {
 
   return (
     <button
-      className='logoContainer font-titulo text-[40px] text-greenCustom grid place-content-center'
+      className='logoContainer font-titulo text-[40px] text-greenCustom flex lg:justify-center lg:items-center '
       onClick={handleClick}
     >
-      <span className='capitalize font-titulo'>
+      <span className='capitalize font-titulo text-left'>
         Rukawe
       </span>
     </button>
