@@ -14,13 +14,8 @@ const Home = () => {
 
 
   return (
-    <div className='w-full min-h-56 py-14 flex flex-col justify-start items-center gap-5'>
-      <section className='banner'>
-
-      </section>
-      <h1 className="text-red text-2xl font-titulo flex gap-1 justify-center items-center">Home</h1>
-
-      <section className='w-full h-96 bg-tremor-brand-faint '>
+    <div className='w-full min-h-56 py-14 flex flex-col justify-start items-start'>
+      <section className='w-full h-[450px] border-2 border-color_custom3 rounded-md'>
 
         <CarruselHome />
       </section>

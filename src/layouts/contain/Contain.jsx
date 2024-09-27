@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Header from '../header/Header'
+import Footer from '../footer/Footer'
 
 const Contain = ({ children }) => {
 
@@ -9,10 +10,10 @@ const Contain = ({ children }) => {
   return (
     <div className="w-full min-h-screen flex flex-col justify-start items-start content-start overflow-hidden gap-4 relative">
       <Header />
-      <main className=' w-full h-full min-h-screen flex justify-center items-center text-slate-900 mt-16 lg:mt-20'>
+      <main className=' w-full h-full min-h-screen flex flex-col justify-start items-center text-slate-900 mt-16 lg:mt-20'>
         {children}
       </main>
-      <footer className='w-full h-24 bg-slate-500'></footer>
+      <Footer />
     </div>
   )
 }

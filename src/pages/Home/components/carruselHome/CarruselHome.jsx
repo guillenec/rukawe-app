@@ -3,9 +3,13 @@ import React from 'react'
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import banner_final from '../../../../img/banner_final.png'
+import banner1 from '../../../../img/banner1.png'
 import banner2 from '../../../../img/banner2.png'
-import dinosaurio from '../../../../img/dinosaurio.png'
+import banner3 from '../../../../img/banner3.png'
+import banner5 from '../../../../img/banner5.png'
+import banner7 from '../../../../img/banner7.png'
+
+
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -21,7 +25,7 @@ const CarruselHome = () => {
       slidesPerView={1}
       navigation
       pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
+      // scrollbar={{ draggable: true }}
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
       autoplay={{
@@ -32,13 +36,16 @@ const CarruselHome = () => {
 
     >
       <SwiperSlide>
-        <img src={banner_final} alt="banner 1 aplicacion" className='w-full h-full overflow-hidden object-contain' />
+        <img src={banner1} alt="banner 1 aplicacion" className='w-full h-full overflow-hidden object-contain object-center' />
       </SwiperSlide>
       <SwiperSlide>
-        <img src={banner2} alt="banner 2 aplicacion" className='w-full h-full overflow-hidden object-contain' />
+        <img src={banner3} alt="banner 3 aplicacion" className='w-full h-full overflow-hidden object-contain object-center' />
       </SwiperSlide>
       <SwiperSlide>
-        <img src={dinosaurio} alt="banner 3 aplicacion" className='w-full h-full overflow-hidden object-contain' />
+        <img src={banner5} alt="banner 4 aplicacion" className='w-full h-full overflow-hidden object-contain' />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src={banner7} alt="banner 4 aplicacion" className='w-full h-full overflow-hidden object-contain' />
       </SwiperSlide>
       ...
     </Swiper>
