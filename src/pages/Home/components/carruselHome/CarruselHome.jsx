@@ -1,6 +1,6 @@
 import React from 'react'
 // Import Swiper React components
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import banner_final from '../../../../img/banner_final.png'
@@ -16,7 +16,7 @@ const CarruselHome = () => {
   return (
     <Swiper
       // install Swiper modules
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
+      modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
       spaceBetween={50}
       slidesPerView={1}
       navigation
@@ -24,7 +24,12 @@ const CarruselHome = () => {
       scrollbar={{ draggable: true }}
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
+      autoplay={{
+        delay: 5500,
+        disableOnInteraction: false,
+      }}
       className='h-full'
+
     >
       <SwiperSlide>
         <img src={banner_final} alt="banner 1 aplicacion" className='w-full h-full overflow-hidden object-contain' />
