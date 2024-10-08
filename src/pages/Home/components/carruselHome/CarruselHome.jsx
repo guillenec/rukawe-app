@@ -4,9 +4,7 @@ import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/module
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import banner1 from '../../../../img/banner1.png'
-import banner2 from '../../../../img/banner2.png'
 import banner3 from '../../../../img/banner3.png'
-import banner5 from '../../../../img/banner5.png'
 import banner7 from '../../../../img/banner7.png'
 
 
@@ -42,10 +40,7 @@ const CarruselHome = () => {
         <img src={banner3} alt="banner 3 aplicacion" className='w-full h-full overflow-hidden object-contain object-center' />
       </SwiperSlide>
       <SwiperSlide>
-        <img src={banner5} alt="banner 4 aplicacion" className='w-full h-full overflow-hidden object-contain' />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src={banner7} alt="banner 4 aplicacion" className='w-full h-full overflow-hidden object-contain' />
+        <img src={banner7} alt="banner 7 aplicacion" className='w-full h-full overflow-hidden object-contain' />
       </SwiperSlide>
       ...
     </Swiper>
