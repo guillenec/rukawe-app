@@ -34,13 +34,13 @@ const CarruselHome = () => {
 
     >
       <SwiperSlide>
-        <img src={banner1} alt="banner 1 aplicacion" className='w-full h-full overflow-hidden object-contain object-center' />
+        <img src={banner1} alt="banner 1 aplicacion" className='w-full h-full overflow-hidden object-cover lg:object-contain object-center bg-[#1b4261]' />
       </SwiperSlide>
       <SwiperSlide>
-        <img src={banner3} alt="banner 3 aplicacion" className='w-full h-full overflow-hidden object-contain object-center' />
+        <img src={banner3} alt="banner 3 aplicacion" className='w-full h-full overflow-hidden object-cover lg:object-contain object-center bg-[#f9993c]' />
       </SwiperSlide>
       <SwiperSlide>
-        <img src={banner7} alt="banner 7 aplicacion" className='w-full h-full overflow-hidden object-contain' />
+        <img src={banner7} alt="banner 7 aplicacion" className='w-full h-full overflow-hidden object-cover lg:object-contain bg-[#9db39c]' />
       </SwiperSlide>
       ...
     </Swiper>
