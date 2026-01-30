@@ -3,9 +3,9 @@ import React from 'react'
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import banner1 from '../../../../img/banner1.png'
-import banner3 from '../../../../img/banner3.png'
-import banner7 from '../../../../img/banner7.png'
+import banner1 from '../../../../img/banner1.jpg'
+import banner3 from '../../../../img/banner2.jpg'
+import banner7 from '../../../../img/banner3.jpg'
 
 
 // Import Swiper styles
@@ -34,13 +34,13 @@ const CarruselHome = () => {
 
     >
       <SwiperSlide>
-        <img src={banner1} alt="banner 1 aplicacion" className='w-full h-full overflow-hidden object-cover lg:object-contain object-center bg-[#1b4261]' />
+        <img src={banner1} alt="banner 1 aplicacion" className='w-full h-full overflow-hidden object-cover lg:object-cover object-center bg-[#1b4261]' />
       </SwiperSlide>
       <SwiperSlide>
-        <img src={banner3} alt="banner 3 aplicacion" className='w-full h-full overflow-hidden object-cover lg:object-contain object-center bg-[#f9993c]' />
+        <img src={banner3} alt="banner 3 aplicacion" className='w-full h-full overflow-hidden object-cover lg:object-cover object-center bg-[#f9993c]' />
       </SwiperSlide>
       <SwiperSlide>
-        <img src={banner7} alt="banner 7 aplicacion" className='w-full h-full overflow-hidden object-cover lg:object-contain bg-[#9db39c]' />
+        <img src={banner7} alt="banner 7 aplicacion" className='w-full h-full overflow-hidden object-cover lg:object-cover bg-[#9db39c]' />
       </SwiperSlide>
       ...
     </Swiper>

@@ -15,7 +15,7 @@ const Home = () => {
 
   return (
     <div className='w-full min-h-56 py-14 flex flex-col justify-start items-start'>
-      <section className='w-full min-h-[350px] h-[calc(100vh-150px)]'>
+      <section className='w-full min-h-[350px] h-[calc(100vh-200px)]'>
         <CarruselHome />
       </section>
     </div>
